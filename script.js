@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dummy Login Handler
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Simple validation for demonstration
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         if (email && password) {
@@ -18,22 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Location Form Handler
     locationForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const user1Location = document.getElementById('user1-location').value;
-        const user2Location = document.getElementById('user2-location').value;
-        const venueType = document.getElementById('venue-type').value;
-
-        // Display the suggestions section
         document.getElementById('location-section').style.display = 'none';
         document.getElementById('suggestions-section').style.display = 'block';
 
-        // Fetch venue suggestions (dummy data for now)
-        const venues = await getVenueSuggestions(user1Location, user2Location, venueType);
+        const venues = await getVenueSuggestions();
         displayVenues(venues);
     });
 
-    // Dummy function to simulate fetching venue suggestions
-    async function getVenueSuggestions(location1, location2, type) {
-        // Replace with actual API call to get venues based on the locations and type
+    async function getVenueSuggestions() {
         return [
             { name: 'Music Cafe', type: 'cafe', distance: '1.2 km', rating: 4.5 },
             { name: 'Chill Park', type: 'park', distance: '2.0 km', rating: 4.2 },
@@ -41,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
     }
 
-    // Display venue suggestions in the list
     function displayVenues(venues) {
         venueList.innerHTML = '';
         venues.forEach(venue => {
