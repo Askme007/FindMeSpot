@@ -1,4 +1,3 @@
-/* Global Reset */
 * {
     box-sizing: border-box;
     margin: 10;
@@ -42,7 +41,6 @@ h2 {
     color: #161a1d;
 }
 
-/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
