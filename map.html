@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FindMeSpot</title>
-    <link rel="stylesheet" href="style.css">
-<!--      link - leaflet css-->
+    <link rel="stylesheet" href="stylemap.css">
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet Routing Machine CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <style>
-/*         map container sizing */
-        #map {
-            width: 100%;
-            height: 600px;  
-        }
-    </style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Gorditas:wght@400;700&family=Great+Vibes&display=swap');
+        </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Geist+Mono:wght@100..900&family=Gorditas:wght@400;700&family=Great+Vibes&display=swap');
+        </style>
 </head>
 <body>
-    <h1>FindMeSpot</h1>
+    <div class="navbar">
+        <div class="logo">FindMeSpot</div>
+    </div>
+   
     <div id="controls">
-<!--         taking location as input -->
         <input type="text" id="location1" placeholder="Enter Location 1" />
         <button onclick="setLocationFromSearch(1)">Set Location 1</button>
         <input type="text" id="location2" placeholder="Enter Location 2" />
         <button onclick="setLocationFromSearch(2)">Set Location 2</button>
-        <button onclick="findMeetingPoint()" id="findSpotButton" disabled>FindMeSpot</button>  <!-- called findmeetingpoint function -->
+        <button onclick="findMeetingPoint()" id="findSpotButton" disabled>FindMeSpot</button>
     </div>
     <div id="map"></div>
-<!--     list of suggested venues -->
     <div id="venueList">
         <h2>Nearby Venues</h2>
         <ul id="venueOptions"></ul>
     </div>
 
-    <!-- Leaflet JS link -->
+    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine JS -->
     <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
-    <!-- main script link -->
-    <script src="script.js"></script>
+    <!-- Custom script for your functionality -->
+    <script src="scriptmap.js"></script>
 </body>
 </html>
