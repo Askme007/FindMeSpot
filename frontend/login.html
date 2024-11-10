@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auth0 Login/Signup</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Gorditas:wght@400;700&family=Great+Vibes&display=swap');
+    </style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Geist+Mono:wght@100..900&family=Gorditas:wght@400;700&family=Great+Vibes&display=swap');
+    </style>
+</head>
+<body>
+  <div class="navbar">
+            <div class="logo">FindMeSpot</div>
+            <div class="menu">
+                <a   class="loginsignup" onclick="toggleForms()">Login</a>
+                <a  class="loginsignup"  onclick="toggleForms()">Sign Up</a>
+            </div>
+            
+        </div>
+
+  <div id="auth">
+    <!-- Login Form -->
+    <div id="loginSection" class="auth-section">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="login-email" placeholder="Email" required autocomplete="email" />
+        <input type="password" id="login-password" placeholder="Password" required autocomplete="current-password" />
+        <button type="submit">Login</button>
+      </form>
+      <p class="toggle-text" style="color: rgb(64, 35, 35);"><b>If you are not already signed up, </b><span onclick="toggleForms()" style="color: black; "><b>click here to sign up</b></span>.</p>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupSection" class="auth-section hidden">
+      <h2>Signup</h2>
+      <form id="signupForm">
+        <input type="email" id="signup-email" placeholder="Email" required autocomplete="email" />
+        <input type="text" id="signup-username" placeholder="Username" required autocomplete="username" />
+        <input type="password" id="signup-password" placeholder="Password" required autocomplete="new-password" />
+        <button type="submit">Signup</button>
+      </form>
+      <p class="toggle-text" style="color: rgb(64, 35, 35);"><b>If you are already signed up, </b><span onclick="toggleForms()"style="color: black; "><b>click here to login</b></span>.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
