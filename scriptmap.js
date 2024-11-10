@@ -1,5 +1,5 @@
 // Map Initialize 
-const map = L.map('map').setView([28.679079, 77.069710], 4); // Centered at delhi
+const map = L.map('map').setView([25.493000, 81.869357], 16); // Centered near mnnit
 
 // show the OpenStreetMap tiles on the map
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -192,3 +192,14 @@ function selectVenue(venue) {
         }).addTo(map);
     }
 }
+
+// Set location by clicking on map
+map.on('click', function (e) {
+    if (!location1Coords) {
+        setLocationMarker(e.latlng, 1);
+        alert("Location 1 set! Now click to set Location 2.");
+    } else if (!location2Coords) {
+        setLocationMarker(e.latlng, 2);
+        alert("Location 2 set! Click 'FindMeSpot' to find midpoint and nearby places.");
+    }
+});
