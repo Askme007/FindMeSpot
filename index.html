@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genratt</title>
+    <title>FindMeSpot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="heroStyle.css">
@@ -34,13 +34,18 @@
 
                 <h2>Plan Your Meeting</h2>
                 
-                <button id="getstarted"> Get Started!</button>
+                <button onclick="navigatetopage()" id="getstarted"> Get Started!</button>
             </div>
         </div>
         <div class="box">
-            <img src="components/map.png" alt="bg">
            <!-- <button id="getstarted"> Get Started!</button> -->
         </div>
     </div>
+    <script>
+        function navigatetopage() {
+            // Set the URL you want to navigate to
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
