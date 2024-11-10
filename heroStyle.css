@@ -24,6 +24,7 @@ body {
 .navbar {
     width: 97vw;
     background: transparent;
+    background-color: #030025;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #0de8f8;
     border-bottom-left-radius: 10px;
@@ -155,7 +156,7 @@ body {
     top: 70%;
    
     /* background: transparent; */
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(25px);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 50%;
@@ -300,5 +301,4 @@ body {
         bottom: 0;
     }
 }
-
 
